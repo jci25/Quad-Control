@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E289F0918D40BC80080129C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E289F0818D40BC80080129C /* libicucore.dylib */; };
+		2E289F0B18D40BD00080129C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E289F0A18D40BD00080129C /* CFNetwork.framework */; };
+		2E289F0D18D40BD80080129C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E289F0C18D40BD80080129C /* Security.framework */; };
+		2E289F1518D40BFA0080129C /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F0E18D40BFA0080129C /* base64.c */; };
+		2E289F1618D40BFA0080129C /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1118D40BFA0080129C /* NSData+SRB64Additions.m */; };
+		2E289F1718D40BFA0080129C /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1418D40BFA0080129C /* SRWebSocket.m */; };
+		2E289F1B18D41B860080129C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1A18D41B860080129C /* TableViewController.m */; };
+		2EB54D2818D40044003E17D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2718D40044003E17D6 /* Foundation.framework */; };
+		2EB54D2A18D40044003E17D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2918D40044003E17D6 /* CoreGraphics.framework */; };
+		2EB54D2C18D40044003E17D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2B18D40044003E17D6 /* UIKit.framework */; };
+		2EB54D3218D40044003E17D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EB54D3018D40044003E17D6 /* InfoPlist.strings */; };
+		2EB54D3418D40044003E17D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB54D3318D40044003E17D6 /* main.m */; };
+		2EB54D3818D40044003E17D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB54D3718D40044003E17D6 /* AppDelegate.m */; };
+		2EB54D3B18D40044003E17D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB54D3918D40044003E17D6 /* Main.storyboard */; };
+		2EB54D3E18D40044003E17D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB54D3D18D40044003E17D6 /* ViewController.m */; };
+		2EB54D4018D40044003E17D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB54D3F18D40044003E17D6 /* Images.xcassets */; };
+		2EB54D4718D40044003E17D6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D4618D40044003E17D6 /* XCTest.framework */; };
+		2EB54D4818D40044003E17D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2718D40044003E17D6 /* Foundation.framework */; };
+		2EB54D4918D40044003E17D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2B18D40044003E17D6 /* UIKit.framework */; };
+		2EB54D5118D40044003E17D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EB54D4F18D40044003E17D6 /* InfoPlist.strings */; };
+		2EB54D5318D40044003E17D6 /* Quad_ControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB54D5218D40044003E17D6 /* Quad_ControlTests.m */; };
+		2EB54D5D18D4005E003E17D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D5C18D4005E003E17D6 /* MapKit.framework */; };
+		2EE50B9618D4D0C800369063 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE50B9518D4D0C800369063 /* DetailViewController.m */; };
+		2EE50B9918D4E48700369063 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE50B9818D4E48700369063 /* ControlViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EB54D4A18D40044003E17D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EB54D1C18D40044003E17D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EB54D2318D40044003E17D6;
+			remoteInfo = "Quad Control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E289F0818D40BC80080129C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		2E289F0A18D40BD00080129C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2E289F0C18D40BD80080129C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2E289F0E18D40BFA0080129C /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base64.c; path = "../../../../Downloads/SocketRocket-master/other/base64.c"; sourceTree = "<group>"; };
+		2E289F0F18D40BFA0080129C /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "../../../../Downloads/SocketRocket-master/other/base64.h"; sourceTree = "<group>"; };
+		2E289F1018D40BFA0080129C /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+SRB64Additions.h"; path = "../../../../Downloads/SocketRocket-master/other/NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		2E289F1118D40BFA0080129C /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+SRB64Additions.m"; path = "../../../../Downloads/SocketRocket-master/other/NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		2E289F1218D40BFA0080129C /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocketRocket-Prefix.pch"; path = "../../../../Downloads/SocketRocket-master/other/SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		2E289F1318D40BFA0080129C /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = "../../../../Downloads/SocketRocket-master/other/SRWebSocket.h"; sourceTree = "<group>"; };
+		2E289F1418D40BFA0080129C /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = "../../../../Downloads/SocketRocket-master/other/SRWebSocket.m"; sourceTree = "<group>"; };
+		2E289F1918D41B860080129C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		2E289F1A18D41B860080129C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		2EB54D2418D40044003E17D6 /* Quad Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quad Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB54D2718D40044003E17D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EB54D2918D40044003E17D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2EB54D2B18D40044003E17D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2EB54D2F18D40044003E17D6 /* Quad Control-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quad Control-Info.plist"; sourceTree = "<group>"; };
+		2EB54D3118D40044003E17D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EB54D3318D40044003E17D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EB54D3518D40044003E17D6 /* Quad Control-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quad Control-Prefix.pch"; sourceTree = "<group>"; };
+		2EB54D3618D40044003E17D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2EB54D3718D40044003E17D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2EB54D3A18D40044003E17D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EB54D3C18D40044003E17D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2EB54D3D18D40044003E17D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2EB54D3F18D40044003E17D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2EB54D4518D40044003E17D6 /* Quad ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quad ControlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB54D4618D40044003E17D6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2EB54D4E18D40044003E17D6 /* Quad ControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quad ControlTests-Info.plist"; sourceTree = "<group>"; };
+		2EB54D5018D40044003E17D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EB54D5218D40044003E17D6 /* Quad_ControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quad_ControlTests.m; sourceTree = "<group>"; };
+		2EB54D5C18D4005E003E17D6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2EE50B9418D4D0C800369063 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2EE50B9518D4D0C800369063 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2EE50B9718D4E48700369063 /* ControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlViewController.h; sourceTree = "<group>"; };
+		2EE50B9818D4E48700369063 /* ControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EB54D2118D40044003E17D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E289F0D18D40BD80080129C /* Security.framework in Frameworks */,
+				2E289F0B18D40BD00080129C /* CFNetwork.framework in Frameworks */,
+				2E289F0918D40BC80080129C /* libicucore.dylib in Frameworks */,
+				2EB54D2A18D40044003E17D6 /* CoreGraphics.framework in Frameworks */,
+				2EB54D2C18D40044003E17D6 /* UIKit.framework in Frameworks */,
+				2EB54D5D18D4005E003E17D6 /* MapKit.framework in Frameworks */,
+				2EB54D2818D40044003E17D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB54D4218D40044003E17D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB54D4718D40044003E17D6 /* XCTest.framework in Frameworks */,
+				2EB54D4918D40044003E17D6 /* UIKit.framework in Frameworks */,
+				2EB54D4818D40044003E17D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E289F1818D40C0D0080129C /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				2E289F0E18D40BFA0080129C /* base64.c */,
+				2E289F0F18D40BFA0080129C /* base64.h */,
+				2E289F1018D40BFA0080129C /* NSData+SRB64Additions.h */,
+				2E289F1118D40BFA0080129C /* NSData+SRB64Additions.m */,
+				2E289F1218D40BFA0080129C /* SocketRocket-Prefix.pch */,
+				2E289F1318D40BFA0080129C /* SRWebSocket.h */,
+				2E289F1418D40BFA0080129C /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			sourceTree = "<group>";
+		};
+		2E289F1C18D41B8F0080129C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EE50B9718D4E48700369063 /* ControlViewController.h */,
+				2EE50B9818D4E48700369063 /* ControlViewController.m */,
+				2EE50B9418D4D0C800369063 /* DetailViewController.h */,
+				2EE50B9518D4D0C800369063 /* DetailViewController.m */,
+				2E289F1918D41B860080129C /* TableViewController.h */,
+				2E289F1A18D41B860080129C /* TableViewController.m */,
+				2EB54D3C18D40044003E17D6 /* ViewController.h */,
+				2EB54D3D18D40044003E17D6 /* ViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2EB54D1B18D40044003E17D6 = {
+			isa = PBXGroup;
+			children = (
+				2EB54D2D18D40044003E17D6 /* Quad Control */,
+				2EB54D4C18D40044003E17D6 /* Quad ControlTests */,
+				2EB54D2618D40044003E17D6 /* Frameworks */,
+				2EB54D2518D40044003E17D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EB54D2518D40044003E17D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EB54D2418D40044003E17D6 /* Quad Control.app */,
+				2EB54D4518D40044003E17D6 /* Quad ControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EB54D2618D40044003E17D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E289F0C18D40BD80080129C /* Security.framework */,
+				2E289F0A18D40BD00080129C /* CFNetwork.framework */,
+				2E289F0818D40BC80080129C /* libicucore.dylib */,
+				2EB54D5C18D4005E003E17D6 /* MapKit.framework */,
+				2EB54D2718D40044003E17D6 /* Foundation.framework */,
+				2EB54D2918D40044003E17D6 /* CoreGraphics.framework */,
+				2EB54D2B18D40044003E17D6 /* UIKit.framework */,
+				2EB54D4618D40044003E17D6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EB54D2D18D40044003E17D6 /* Quad Control */ = {
+			isa = PBXGroup;
+			children = (
+				2E289F1818D40C0D0080129C /* SocketRocket */,
+				2EB54D3618D40044003E17D6 /* AppDelegate.h */,
+				2EB54D3718D40044003E17D6 /* AppDelegate.m */,
+				2EB54D3918D40044003E17D6 /* Main.storyboard */,
+				2E289F1C18D41B8F0080129C /* Views */,
+				2EB54D3F18D40044003E17D6 /* Images.xcassets */,
+				2EB54D2E18D40044003E17D6 /* Supporting Files */,
+			);
+			path = "Quad Control";
+			sourceTree = "<group>";
+		};
+		2EB54D2E18D40044003E17D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EB54D2F18D40044003E17D6 /* Quad Control-Info.plist */,
+				2EB54D3018D40044003E17D6 /* InfoPlist.strings */,
+				2EB54D3318D40044003E17D6 /* main.m */,
+				2EB54D3518D40044003E17D6 /* Quad Control-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EB54D4C18D40044003E17D6 /* Quad ControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EB54D5218D40044003E17D6 /* Quad_ControlTests.m */,
+				2EB54D4D18D40044003E17D6 /* Supporting Files */,
+			);
+			path = "Quad ControlTests";
+			sourceTree = "<group>";
+		};
+		2EB54D4D18D40044003E17D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EB54D4E18D40044003E17D6 /* Quad ControlTests-Info.plist */,
+				2EB54D4F18D40044003E17D6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EB54D2318D40044003E17D6 /* Quad Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB54D5618D40044003E17D6 /* Build configuration list for PBXNativeTarget "Quad Control" */;
+			buildPhases = (
+				2EB54D2018D40044003E17D6 /* Sources */,
+				2EB54D2118D40044003E17D6 /* Frameworks */,
+				2EB54D2218D40044003E17D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quad Control";
+			productName = "Quad Control";
+			productReference = 2EB54D2418D40044003E17D6 /* Quad Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EB54D4418D40044003E17D6 /* Quad ControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB54D5918D40044003E17D6 /* Build configuration list for PBXNativeTarget "Quad ControlTests" */;
+			buildPhases = (
+				2EB54D4118D40044003E17D6 /* Sources */,
+				2EB54D4218D40044003E17D6 /* Frameworks */,
+				2EB54D4318D40044003E17D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EB54D4B18D40044003E17D6 /* PBXTargetDependency */,
+			);
+			name = "Quad ControlTests";
+			productName = "Quad ControlTests";
+			productReference = 2EB54D4518D40044003E17D6 /* Quad ControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EB54D1C18D40044003E17D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Administrator;
+				TargetAttributes = {
+					2EB54D2318D40044003E17D6 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2EB54D4418D40044003E17D6 = {
+						TestTargetID = 2EB54D2318D40044003E17D6;
+					};
+				};
+			};
+			buildConfigurationList = 2EB54D1F18D40044003E17D6 /* Build configuration list for PBXProject "Quad Control" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EB54D1B18D40044003E17D6;
+			productRefGroup = 2EB54D2518D40044003E17D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EB54D2318D40044003E17D6 /* Quad Control */,
+				2EB54D4418D40044003E17D6 /* Quad ControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EB54D2218D40044003E17D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB54D4018D40044003E17D6 /* Images.xcassets in Resources */,
+				2EB54D3218D40044003E17D6 /* InfoPlist.strings in Resources */,
+				2EB54D3B18D40044003E17D6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB54D4318D40044003E17D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB54D5118D40044003E17D6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EB54D2018D40044003E17D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E289F1718D40BFA0080129C /* SRWebSocket.m in Sources */,
+				2E289F1618D40BFA0080129C /* NSData+SRB64Additions.m in Sources */,
+				2EB54D3E18D40044003E17D6 /* ViewController.m in Sources */,
+				2EE50B9618D4D0C800369063 /* DetailViewController.m in Sources */,
+				2EB54D3818D40044003E17D6 /* AppDelegate.m in Sources */,
+				2EE50B9918D4E48700369063 /* ControlViewController.m in Sources */,
+				2E289F1518D40BFA0080129C /* base64.c in Sources */,
+				2E289F1B18D41B860080129C /* TableViewController.m in Sources */,
+				2EB54D3418D40044003E17D6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB54D4118D40044003E17D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB54D5318D40044003E17D6 /* Quad_ControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EB54D4B18D40044003E17D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EB54D2318D40044003E17D6 /* Quad Control */;
+			targetProxy = 2EB54D4A18D40044003E17D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EB54D3018D40044003E17D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB54D3118D40044003E17D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2EB54D3918D40044003E17D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB54D3A18D40044003E17D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EB54D4F18D40044003E17D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB54D5018D40044003E17D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EB54D5418D40044003E17D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2EB54D5518D40044003E17D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EB54D5718D40044003E17D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quad Control/Quad Control-Prefix.pch";
+				INFOPLIST_FILE = "Quad Control/Quad Control-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2EB54D5818D40044003E17D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quad Control/Quad Control-Prefix.pch";
+				INFOPLIST_FILE = "Quad Control/Quad Control-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2EB54D5A18D40044003E17D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quad Control.app/Quad Control";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quad Control/Quad Control-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Quad ControlTests/Quad ControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2EB54D5B18D40044003E17D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quad Control.app/Quad Control";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quad Control/Quad Control-Prefix.pch";
+				INFOPLIST_FILE = "Quad ControlTests/Quad ControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EB54D1F18D40044003E17D6 /* Build configuration list for PBXProject "Quad Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB54D5418D40044003E17D6 /* Debug */,
+				2EB54D5518D40044003E17D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB54D5618D40044003E17D6 /* Build configuration list for PBXNativeTarget "Quad Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB54D5718D40044003E17D6 /* Debug */,
+				2EB54D5818D40044003E17D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB54D5918D40044003E17D6 /* Build configuration list for PBXNativeTarget "Quad ControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB54D5A18D40044003E17D6 /* Debug */,
+				2EB54D5B18D40044003E17D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EB54D1C18D40044003E17D6 /* Project object */;
+}
