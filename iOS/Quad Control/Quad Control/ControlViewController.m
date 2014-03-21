@@ -39,7 +39,9 @@
     self.fThrottle = 0;
     self.fYaw = 0;
     
-
+    
+    
+   
 }
 
 - (void)didReceiveMemoryWarning

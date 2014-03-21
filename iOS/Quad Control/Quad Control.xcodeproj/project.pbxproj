@@ -14,6 +14,7 @@
 		2E289F1618D40BFA0080129C /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1118D40BFA0080129C /* NSData+SRB64Additions.m */; };
 		2E289F1718D40BFA0080129C /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1418D40BFA0080129C /* SRWebSocket.m */; };
 		2E289F1B18D41B860080129C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E289F1A18D41B860080129C /* TableViewController.m */; };
+		2E9B73EA18DA7D1B00ECFDC8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9B73E918DA7D1B00ECFDC8 /* MapViewController.m */; };
 		2EB54D2818D40044003E17D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2718D40044003E17D6 /* Foundation.framework */; };
 		2EB54D2A18D40044003E17D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2918D40044003E17D6 /* CoreGraphics.framework */; };
 		2EB54D2C18D40044003E17D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB54D2B18D40044003E17D6 /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		2E289F1418D40BFA0080129C /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = "../../../../Downloads/SocketRocket-master/other/SRWebSocket.m"; sourceTree = "<group>"; };
 		2E289F1918D41B860080129C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2E289F1A18D41B860080129C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		2E9B73E818DA7D1B00ECFDC8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2E9B73E918DA7D1B00ECFDC8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2EB54D2418D40044003E17D6 /* Quad Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quad Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB54D2718D40044003E17D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2EB54D2918D40044003E17D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 				2E289F1A18D41B860080129C /* TableViewController.m */,
 				2EB54D3C18D40044003E17D6 /* ViewController.h */,
 				2EB54D3D18D40044003E17D6 /* ViewController.m */,
+				2E9B73E818DA7D1B00ECFDC8 /* MapViewController.h */,
+				2E9B73E918DA7D1B00ECFDC8 /* MapViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				2EB54D3818D40044003E17D6 /* AppDelegate.m in Sources */,
 				2EE50B9918D4E48700369063 /* ControlViewController.m in Sources */,
 				2E289F1518D40BFA0080129C /* base64.c in Sources */,
+				2E9B73EA18DA7D1B00ECFDC8 /* MapViewController.m in Sources */,
 				2E289F1B18D41B860080129C /* TableViewController.m in Sources */,
 				2EB54D3418D40044003E17D6 /* main.m in Sources */,
 			);

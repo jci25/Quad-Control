@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-89" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Quad Control Center-->
         <scene sceneID="eGZ-5B-jY7">
             <objects>
                 <viewController id="aB0-aJ-CFC" customClass="ViewController" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oC6-dn-lGf"/>
+                    <navigationItem key="navigationItem" title="Quad Control Center" id="oC6-dn-lGf"/>
                     <connections>
                         <outlet property="mServer" destination="twL-jQ-m9M" id="A88-Jo-8ni"/>
                     </connections>
@@ -68,7 +68,38 @@
             </objects>
             <point key="canvasLocation" x="335" y="53"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Map View Controller - Devices Map-->
+        <scene sceneID="2x7-XK-ujc">
+            <objects>
+                <viewController id="7EI-l3-O2O" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ice-Ne-PPQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mum-ml-QSc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kAW-rb-jdh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rdw-or-64p">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Devices Map" id="R8J-Zf-Eeu">
+                        <barButtonItem key="backBarButtonItem" title="Map" id="m2u-UJ-YlH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mMap" destination="Rdw-or-64p" id="LLw-gD-N6L"/>
+                        <segue destination="vpD-qU-hdR" kind="push" identifier="detailSegue" id="Qfj-su-ckC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9s-Bm-CzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="-573"/>
+        </scene>
+        <!--Table View Controller - Devices List-->
         <scene sceneID="a9e-va-UZe">
             <objects>
                 <viewController id="VHJ-iz-L3Y" customClass="TableViewController" sceneMemberID="viewController">
@@ -117,7 +148,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wgP-ne-shZ"/>
+                    <navigationItem key="navigationItem" title="Devices List" id="wgP-ne-shZ">
+                        <barButtonItem key="backBarButtonItem" title="List" id="HsJ-IH-oA2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="2qj-zh-JZb">
+                            <connections>
+                                <segue destination="7EI-l3-O2O" kind="push" identifier="mapSegue" id="gCm-5o-NTO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="STs-gX-rdr" id="p2q-xV-47H"/>
                     </connections>
@@ -126,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="723" y="53"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail View Controller - Details-->
         <scene sceneID="xH9-0M-EqJ">
             <objects>
                 <viewController id="vpD-qU-hdR" customClass="DetailViewController" sceneMemberID="viewController">
@@ -186,7 +224,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PO2-P0-RoD"/>
+                    <navigationItem key="navigationItem" title="Details" id="PO2-P0-RoD"/>
                     <connections>
                         <outlet property="mIP" destination="Tmq-dz-yt6" id="FeI-PW-QbO"/>
                         <outlet property="mMap" destination="Cmh-7I-5H9" id="XYb-u1-Yel"/>
@@ -285,4 +323,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="6xf-Ot-Nfz"/>
+    </inferredMetricsTieBreakers>
 </document>

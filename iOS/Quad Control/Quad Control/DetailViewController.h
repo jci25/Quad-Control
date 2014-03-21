@@ -17,5 +17,6 @@
 @property NSString *ip;
 @property NSString *key;
 @property NSString *server;
+@property NSString *name;
 
 @end

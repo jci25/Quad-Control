@@ -87,7 +87,48 @@ ServerSocket ss;
 				 ch3.setDutyCycle(c3);
 				 ch4.setDutyCycle(c4);
 				 ch5.setDutyCycle(c5);
-				 //Thread.sleep(10);
+				 Thread.sleep(10);
+			 }
+			 
+			 public void setCh1(float d){
+				 try {
+					ch1.setDutyCycle(d);
+				} catch (ConnectionLostException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 }
+			 public void setCh2(float d){
+				 try {
+					ch2.setDutyCycle(d);
+				} catch (ConnectionLostException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 }
+			 public void setCh3(float d){
+				 try {
+					ch3.setDutyCycle(d);
+				} catch (ConnectionLostException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 }
+			 public void setCh4(float d){
+				 try {
+					ch4.setDutyCycle(d);
+				} catch (ConnectionLostException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 }
+			 public void setCh5(float d){
+				 try {
+					ch5.setDutyCycle(d);
+				} catch (ConnectionLostException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			 }
 			 
 			 @Override

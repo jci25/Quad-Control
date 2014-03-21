@@ -28,7 +28,7 @@ public class ExampleClient extends WebSocketClient {
 		@Override
 		public void onOpen( ServerHandshake handshakedata ) {
 			System.out.println( "opened connection" );
-			this.send("Add");
+			this.send("Add Joes RPI");
 			// otg = new IOIO(null);
 			// if you plan to refuse connection based on ip or httpfields overload: onWebsocketHandshakeReceivedAsClient
 		}
@@ -38,11 +38,21 @@ public class ExampleClient extends WebSocketClient {
 			String[] pwm = message.split(" ");
 			System.out.println(message);
 			if(pwm.length == 5){
-				otg.c1 = Float.parseFloat(pwm[0]);
-				otg.c2 = Float.parseFloat(pwm[1]);
-				otg.c3 = Float.parseFloat(pwm[2]);
-				otg.c4 = Float.parseFloat(pwm[3]);
-				otg.c5 = Float.parseFloat(pwm[4]);
+				if(Math.abs(otg.c1 - Float.parseFloat(pwm[0])) > .001){
+					otg.c1 = Float.parseFloat(pwm[0]);
+				}
+				if(Math.abs(otg.c2 - Float.parseFloat(pwm[1])) > .001){
+					otg.c2 = Float.parseFloat(pwm[1]);
+				}
+				if(Math.abs(otg.c3 - Float.parseFloat(pwm[2])) > .001){
+					otg.c3 = Float.parseFloat(pwm[2]);
+				}
+				if(Math.abs(otg.c4 - Float.parseFloat(pwm[3])) > .001){
+					otg.c4 = Float.parseFloat(pwm[3]);
+				}
+				if(Math.abs(otg.c5 - Float.parseFloat(pwm[4])) > .001){
+					otg.c5 = Float.parseFloat(pwm[4]);
+				}
 				
 			}
 		}

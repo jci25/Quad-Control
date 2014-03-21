@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "DetailViewController.h"
+#import "MapViewController.h"
 
 @interface TableViewController () <SRWebSocketDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -58,7 +59,7 @@
     NSDictionary *jsonDict = [_data objectAtIndex:indexPath.row];
     
     
-    [cell.textLabel setText:[jsonDict objectForKey:@"IP"]];
+    [cell.textLabel setText:[jsonDict objectForKey:@"Name"]];
     
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"Key: %@", [jsonDict objectForKey:@"Key"]]];
     return cell;
@@ -74,6 +75,12 @@
                                          stringByReplacingOccurrencesOfString:@"'" withString:@""];
         controller.ip = sendIP;
         controller.key = [jsonDict objectForKey:@"Key"];
+        controller.name = [jsonDict objectForKey:@"Name"];
+        controller.server = _server;
+    }else if ([segue.identifier isEqualToString:@"mapSegue"]){
+        MapViewController *controller = (MapViewController *)segue.destinationViewController;
+        
+        controller.mData = _data;
         controller.server = _server;
     }
     

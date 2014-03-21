@@ -31,14 +31,19 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 		data = dict()
 		data2 = dict()
 		#print 'message received %s' % message
-		if message == "Add":
+		if message.find("Add") != -1:
 			info = self.getKey(str(repr(self.request.headers)))
 			data["IP"] = repr(self.request.remote_ip)
 			data["Key"] = info
+			print message.find(" ")
+			if message.find(" ")+1 != 0:
+				data["Name"] = message[message.find(" ")+1:]
+			else:
+				data["Name"] = repr(self.request.remote_ip)
 			data2["IP"] = repr(self.request.remote_ip)
 			data2["Key"] = info
 			data2["Id"] = self
-			if data in arr:
+			if any(info in sDict["Key"] for sDict in arr):
 				1==1
 			else:
 				listeners.append(self)
@@ -83,7 +88,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
 		print arr
 		try:
 			#print data
-			arr.remove(data)
+			for sDict in arr:
+				if info in sDict["Key"]:
+					arr.remove(sDict)
 			arr2.remove(data2)
 			listeners.remove(self)
 		except ValueError:

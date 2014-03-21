@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "ControlViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <MKMapViewDelegate>
 
 @end
 
@@ -29,10 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //_ip = @"50.182.71.123";
-    _mIP.text = _ip;
-    
+    _mIP.text=_ip;
+    NSString *ip = [NSString stringWithFormat:@"http://ip-api.com/json/%@", _ip];
     NSURL *url = [NSURL URLWithString:
-                  [@"http://ip-api.com/json/" stringByAppendingString:_ip]];
+                  ip];
     NSData* data = [NSData dataWithContentsOfURL:
                     url];
     NSError* error;
@@ -44,27 +44,35 @@
     NSString* currentIP = [json objectForKey:@"query"];
     NSString* lat = [json objectForKey:@"lat"];
     NSString* lon = [json objectForKey:@"lon"];
-    
+    _mMap.delegate = self;
     [_mMap setShowsUserLocation:YES];
-    MKUserLocation *userLocation = _mMap.userLocation;
-    MKCoordinateRegion region;
+    //MKUserLocation *userLocation = _mMap.userLocation;
+    
+    //MKCoordinateRegion region;
     //region.center = userLocation.location.coordinate;
     //region.span = MKCoordinateSpanMake(2.0, 2.0); //Zoom distance
     //region = [_mMap regionThatFits:region];
     //[_mMap setRegion:region animated:YES];
     _mMap.mapType = MKMapTypeStandard;
-    NSLog(@"%@", userLocation.location.coordinate);
+    //NSLog(@"%@", userLocation.location.coordinate);
     
     
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = [lat floatValue];
     coordinate.longitude = [lon floatValue];
     MKPlacemark *mPlacemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
-    [_mMap addAnnotation:mPlacemark];
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = mPlacemark.coordinate;
+    point.title = _name;
+    [_mMap addAnnotation:point];
     
-    CLGeocoder *myGeoCode = [[CLGeocoder alloc] init];
+    [self zoomToFitMapAnnotations:_mMap];
+
     
-    /*[myGeoCode geocodeAddressString:loca
+    /*CLGeocoder *myGeoCode = [[CLGeocoder alloc] init];
+    
+    
+    [myGeoCode geocodeAddressString:loca
      
                   completionHandler:^(NSArray *placemarks, NSError *error) {
                       CLPlacemark *whatPlaceIsThis = placemarks[0];
@@ -81,6 +89,48 @@
                       
                   }];*/
 }
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+ 
+    
+    [self zoomToFitMapAnnotations:_mMap];
+}
+
+
+- (void)zoomToFitMapAnnotations:(MKMapView *)mapView {
+    if ([mapView.annotations count] == 0) return;
+    
+    MKUserLocation *userLocation = mapView.userLocation;
+    CLLocationCoordinate2D topLeftCoord;
+    topLeftCoord.latitude = userLocation.location.coordinate.latitude;
+    topLeftCoord.longitude = userLocation.location.coordinate.longitude;
+    
+    CLLocationCoordinate2D bottomRightCoord;
+    bottomRightCoord.latitude = userLocation.location.coordinate.latitude;
+    bottomRightCoord.longitude = userLocation.location.coordinate.longitude;
+    
+    for(id<MKAnnotation> annotation in mapView.annotations) {
+        topLeftCoord.longitude = fmin(topLeftCoord.longitude, annotation.coordinate.longitude);
+        topLeftCoord.latitude = fmax(topLeftCoord.latitude, annotation.coordinate.latitude);
+        bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, annotation.coordinate.longitude);
+        bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, annotation.coordinate.latitude);
+    }
+    
+    
+    
+    
+    MKCoordinateRegion region;
+    region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5;
+    region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5;
+    region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.1;
+    
+    // Add a little extra space on the sides
+    region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.1;
+    
+    region = [mapView regionThatFits:region];
+    [mapView setRegion:region animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
